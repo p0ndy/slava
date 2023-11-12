@@ -1,0 +1,23 @@
+header{
+    background-color: #111216;
+}
+
+.rounded-circle{
+    border-color: #FE2C55;
+    border: 1.5px;
+}
+
+.button-alert{
+    background-color: #111216;
+    border: none;
+}
+
+
+  .popover{
+    background-color: #1F2027;
+    border: 2px solid #5B5C63; 
+  }
+  .popover-header{
+    background-color: #1F2027;
+    color: white;
+  }
