@@ -1,4 +1,3 @@
-<!-- Ваш HTML-файл -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,20 +16,32 @@
         </div>
         <div class="d-flex">
           <div class="d-flex">
-            <button type="button" class="button-alert" data-bs-toggle="popover" title="Ваши Уведомления" data-bs-html="true" data-bs-content="#customNotificationsContent">
+            <button type="button" class="button-alert mx-3" data-bs-toggle="popover" title="Ваши Уведомления" data-bs-html="true" data-bs-content="#customNotificationsContent">
               <img src="public/img/alert.png" alt="alert">
             </button>
+            <!-- уведомления -->
             <div id="customNotificationsContent" class="customNotificationsContent" style="display: none;">
-              <div class="container">
                 <div class="d-flex">
-                  <span class="text-white">qweqwe</span>
+                  <div class="d-flex">
+                    <a href="#" class="avatar-message">
+                      <img src="public/img/avatarHeader.png" alt="Аватар">
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column ms-3 ">
+                    <span class="text-notifications">
+                      Пользователь <b id="username" class="text-name">Никита Жмаев</b> оценил ваше видео
+                    </span>
+                    <img src="public/img/videoYved.png" alt="video" class="videoYved mt-2">
+                    <span class="text-notifications">
+                      10.02.23
+                    </span>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
-          <div class="d-flex mx-3">
-            <img src="public/img/avatarHeader.png" class="rounded-circle" alt="avatarHeader">
-          </div>
+          <a href="#" class="avatar-button">
+            <img src="public/img/avatarHeader.png" alt="Аватар">
+          </a>
         </div>
       </div>
     </div>
