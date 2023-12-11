@@ -39,13 +39,38 @@
                 </div>
             </div>
           </div>
-          <a href="#" class="avatar-button">
-            <img src="public/img/avatarHeader.png" alt="Аватар">
-          </a>
+          <button class="btn avatar-button" type="button" data-bs-toggle="modal" data-bs-target="#auth">
+            <img src="public/img/avatarHeader.png" alt="ava">
+          </button>
         </div>
       </div>
     </div>
   </header>
+
+
+  <!-- modal -->
+  <div class="modal fade" id="auth" tabindex="-1" aria-bs-labelledby="authLabel" aria-bs-hidden="true" >
+    <div class="modal-dialog">
+      <button type="button" class="btn-close btn-close-white d-flex" aria-label="Close" data-bs-dismiss="modal"></button>
+      <div class="modal-content">
+        <div class=" container AuthReg">
+          <div class="modal-header d-flex">
+            <h5 class="modal-title " id="authLabel">
+              <b class="text-white justify-content-between">Вход в личный кабинет</b>
+            </h5>
+          </div>
+          <div class="modal-body">
+              <input type="email" name="email" id="email" placeholder="Ваш email" class="text-white">
+          </div>
+          <div class="modal-footer">
+  
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+    <!-- modal -->
+ 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -63,5 +88,30 @@
 
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl, {
+          content: function () {
+            // Получаем содержимое по ID
+            var contentId = popoverTriggerEl.getAttribute('data-bs-content');
+            return document.querySelector(contentId).innerHTML;
+          }
+        });
+      });
+  
+      var authModal = new bootstrap.Modal(document.getElementById('auth'));
+  
+      authModal._element.addEventListener('hidden.bs.modal', function () {
+        // Очищаем значения всех инпутов при закрытии модального окна
+        var inputs = document.querySelectorAll('.modal input');
+        inputs.forEach(function (input) {
+          input.value = '';
+        });
+      });
+    });
+  </script>
+  
 </body>
 </html>
