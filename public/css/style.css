@@ -74,5 +74,50 @@ input{
   height: 3rem;
 }
 
+.textred{
+  color: #FE2C55;
+}
+
+u {    
+    border-bottom: 1px dotted #FE2C55;
+    text-decoration: none;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn-danger, .btn-danger:hover, .btn-danger:active, .btn-danger:visited {
+  background-color: #FE2C55 !important;
+}
+
+.password-toggle {
+  position: relative;
+  width: 100%;
+}
+.password-toggle span {
+  background-image: url(images/eye.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  margin-bottom: auto;
+  position: absolute;
+  margin-top: auto;
+  cursor: pointer;
+  opacity: 0.3;
+  height: 30px;
+  width: 30px;
+  right: 10px;
+  bottom: 0;
+  top: 0;
+}
+.password-toggle span.show {
+  background-image: url(images/eye-slash.svg);
+}
+
 
 

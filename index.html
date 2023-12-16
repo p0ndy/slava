@@ -51,18 +51,27 @@
   <!-- modal -->
   <div class="modal fade" id="auth" tabindex="-1" aria-bs-labelledby="authLabel" aria-bs-hidden="true" >
     <div class="modal-dialog">
-      <button type="button" class="btn-close btn-close-white d-flex" aria-label="Close" data-bs-dismiss="modal"></button>
+      <div class="d-flex align-items-end justify-content-end">
+        <button type="button" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="modal"></button>
+      </div>
       <div class="modal-content">
         <div class=" container AuthReg">
-          <div class="modal-header d-flex">
+          <div class="modal-header  clearfix d-flex">
             <h5 class="modal-title " id="authLabel">
               <b class="text-white justify-content-between">Вход в личный кабинет</b>
             </h5>
           </div>
-          <div class="modal-body">
-              <input type="email" name="email" id="email" placeholder="Ваш email" class="text-white">
+          <div class="modal-body clearfix d-flex justify-content-between align-items-between flex-column">
+              <input type="email" name="email" id="email" placeholder="Ваш email" class="text-white my-2">
+              <div class="password-toggle">
+                <input type="password" placeholder="Введите пароль*" name="password" class="text-white my-2">
+                <span></span>
+            </div>
+            <a href="#" class="textred"><u>Забыли пароль?</u></a>
+            <button type="button" value="Input" class="btn btn-danger my-3 py-3" >Войти</button>
+
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer clearfix">
   
           </div>
         </div>
@@ -72,10 +81,11 @@
     <!-- modal -->
  
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+ 
+<script>
     document.addEventListener('DOMContentLoaded', function () {
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl, {
       content: function () {
         // Получаем содержимое по ID
@@ -83,13 +93,13 @@
         return document.querySelector(contentId).innerHTML;
       }
     });
-  });
-});
-
-
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    });
+    });
+    
+</script>
+ <script>
+     
+     document.addEventListener('DOMContentLoaded', function () {
       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl, {
@@ -100,9 +110,9 @@
           }
         });
       });
-  
+    
       var authModal = new bootstrap.Modal(document.getElementById('auth'));
-  
+    
       authModal._element.addEventListener('hidden.bs.modal', function () {
         // Очищаем значения всех инпутов при закрытии модального окна
         var inputs = document.querySelectorAll('.modal input');
@@ -111,7 +121,20 @@
         });
       });
     });
-  </script>
-  
+ </script>
+    
+    <script>
+    $("body").on("click", ".password-toggle span", function (e) {
+    let now = $(this).parents('.password-toggle').find('input');
+    if (now.attr('type') == 'password') {
+        now.attr('type', 'text')
+    } else {
+        now.attr('type', 'password')
+    }
+    $(this).toggleClass('show')
+});
+    </script>
+    
+    
 </body>
 </html>
