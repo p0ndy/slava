@@ -68,11 +68,41 @@
                 <span></span>
             </div>
             <a href="#" class="textred"><u>Забыли пароль?</u></a>
-            <button type="button" value="Input" class="btn btn-danger my-3 py-3" >Войти</button>
+
+              <button type="submit" value="Input" class="btn btn-danger my-3 py-3" >Войти</button>
+
 
           </div>
           <div class="modal-footer clearfix">
-  
+            <div class="container">
+              <div id="app">
+                <!-- Контейнер с тремя частями -->
+                <div class="container">
+                  <div class="row">
+                    <!-- 1я часть: полоса цвета и текст -->
+                    <div class=" d-flex justify-content-center align-items-center textgray">
+                      Через социальную сеть
+                    </div>
+                  </div>
+            
+                  <div class="row mt-3">
+                    <!-- 2я часть: три иконки соцсетей с расстоянием 10px между ними -->
+                    <div class=" d-flex justify-content-center align-items-center">
+                      <img src="public/img/vk.svg" alt="vk" class="me-2">
+                      <img src="public/img/fc.svg" alt="fc" class="me-2">
+                      <img src="public/img/я.svg" alt="yandex">
+                    </div>
+                  </div>
+            
+                  <div class="row mt-3">
+                    <!-- 3я часть: текст "Нет аккаунта? Зарегистрируйтесь" -->
+                    <div class=" d-flex justify-content-center align-items-center">
+                       <span class="textgray mx-1">Нет аккаунта? </span> <a href="" class="textred mx-1" data-bs-toggle="modal" data-bs-target="#register">Зарегистрируйтесь</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         </div>
@@ -80,6 +110,92 @@
   </div>
     <!-- modal -->
  
+    <div class="modal fade" id="register" tabindex="-1" aria-bs-labelledby="registerLabel" aria-bs-hidden="true" >
+      <div class="modal-dialog">
+        <div class="d-flex align-items-end justify-content-end">
+          <button type="button" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-content">
+          <div class=" container AuthReg">
+            <div class="modal-header  clearfix d-flex">
+              <h5 class="modal-title " id="authLabel">
+                <b class="text-white justify-content-between">Регистрация</b>
+              </h5>
+            </div>
+            <div class="modal-body clearfix d-flex justify-content-between align-items-between flex-column">
+                <input type="email" name="email" id="email" placeholder="Ваш email" class="text-white my-2">
+                <input type="text" name="email" id="email" placeholder="Ваше имя" class="text-white my-2">
+                <div class="d-flex flex-row  my-2">
+                  <input type="text" name="email" id="email" placeholder="Дата рождения" class="text-white me-1  ">
+                  <input type="text" name="email" id="email" placeholder="Город" class="text-white ms-1">
+                </div>
+                
+                <input type="email" name="email" id="email" placeholder="Ваш email" class="text-white my-2">
+                <div class="password-toggle">
+                  <input type="password" placeholder="Введите пароль*" name="password" class="text-white my-2">
+                  <span></span>
+              </div>
+              <a href="#" class="textred"><u>Забыли пароль?</u></a>
+              <button type="submit" value="Input" class="btn btn-danger my-3 py-3" >Войти</button>
+  
+            </div>
+            <div class="modal-footer clearfix">
+              <div class="container">
+                <div id="app">
+                  <!-- Контейнер с тремя частями -->
+                  <div class="container">
+                    <div class="row">
+                      <!-- 1я часть: полоса цвета и текст -->
+                      <div class=" d-flex justify-content-center align-items-center textgray">
+                        Через социальную сеть
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- 2я часть: три иконки соцсетей с расстоянием 10px между ними -->
+                      <div class=" d-flex justify-content-center align-items-center">
+                        <img src="public/img/vk.svg" alt="vk" class="me-2">
+                        <img src="public/img/fc.svg" alt="fc" class="me-2">
+                        <img src="public/img/я.svg" alt="yandex">
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- 3я часть: текст "Нет аккаунта? Зарегистрируйтесь" -->
+                      <div class=" d-flex justify-content-center align-items-center">
+                         <span class="textgray mx-1">Уже есть аккаунт? </span> <a href="" class="textred mx-1" data-bs-toggle="modal" data-bs-target="#registerModal">Авторизуйтесь</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    
+   <nav class="navred">
+    <div class="container py-2">
+      <div class="d-flex justify-content-end align-items-center">
+        <img src="public/img/arrowLeft.svg" alt="arrow" class="me-1">
+        <span class="text-white ms-1">Назад</span>
+      </div>
+    </div>
+   </nav>
+
+   <section class="main">
+    <div class="container ">
+      <div class="search d-flex">
+        <div class="form  d-flex flex-row">
+          <img src="public/img/search.svg" alt="search">
+          <input type="text" class="form-control form-input" placeholder="Поиск">
+          
+        </div>
+        
+      </div>
+    </div>
+   </section>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
  
 <script>
@@ -135,6 +251,28 @@
 });
     </script>
     
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Получаем ссылку на элемент "Зарегистрируйтесь"
+    const registerLink = document.querySelector('.textred');
+
+    // Слушаем клик по ссылке "Зарегистрируйтесь"
+    registerLink.addEventListener('click', function (event) {
+      // Отменяем действие по умолчанию (переход по ссылке)
+      event.preventDefault();
+
+      // Закрываем текущее модальное окно авторизации
+      const authModal = new bootstrap.Modal(document.getElementById('auth'));
+      authModal.hide();
+
+      // Открываем новое модальное окно регистрации
+      const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+      registerModal.show();
+    });
+  });
+
+</script>
+
     
 </body>
 </html>

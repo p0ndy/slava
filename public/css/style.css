@@ -95,6 +95,23 @@ a{
   background-color: #FE2C55 !important;
 }
 
+
+
+.navred{
+  background-color: #FE2C55;
+}
+
+.navbar{
+  background-color: #FE2C55;
+}
+
+.navbar:hover{
+  background-color: #FF4A73;
+}
+
+.textgray{
+  color: #C3C3C3;
+}
 .password-toggle {
   position: relative;
   width: 100%;
@@ -118,6 +135,11 @@ a{
 .password-toggle span.show {
   background-image: url(images/eye-slash.svg);
 }
+
+.main{
+  background-color: #1F1F27;
+}
+
 
 
 
