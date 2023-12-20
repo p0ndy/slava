@@ -10,11 +10,11 @@
 <body>
   <header>
     <div class="container">
-      <div class="d-flex d-row justify-content-between align-items-between py-3">
-        <div class="d-flex">
+      <div class="d-flex d-row justify-content-end align-items-end py-3 flex-wrap">
+        <div class="d-flex col-lg-6">
           <img src="public/img/logo.svg" alt="logo">
         </div>
-        <div class="d-flex">
+        <div class="d-flex col-lg-6 justify-content-end">
           <div class="d-flex">
             <button type="button" class="button-alert mx-3" data-bs-toggle="popover" title="Ваши Уведомления" data-bs-html="true" data-bs-content="#customNotificationsContent">
               <img src="public/img/alert.png" alt="alert">
@@ -185,43 +185,45 @@
    </nav>
 
    <section class="main">
-    <div class="container d-flex flex-row justify-content-end align-items-center py-2">
+    <div class="container d-flex flex-row justify-content-between align-items-between py-2 flex-wrap">
   
-      <div class="search-bar col-lg-8 d-flex py-1">
+      <div class="search-bar col-lg-8 d-flex col-md-12 col-sm-12 ">
         <div class="search-icon">
           <img src="public/img/search.svg" alt="search">
         </div>
         <input type="text" placeholder="Поиск">
       </div>
   
-      <div class="d-flex col-lg-2 justify-content-end">
-        <select id="sorting" class="custom-select">
-          <option value="popularity" selected><span class="selecthov">По популярности</span></option>
-          <option value="date"><span class="selecthov">По дате</span></option>
-        </select>
-      </div>
-  
-      <div class="dropdown-list d-flex col-lg-2 justify-content-center">
-        <button class="dropdown-btn" onclick="toggleDropdown()">
-          Выберите жанры
-          <span class="counter-badge" id="counterBadge">0</span>
-        </button>
-        <div class="dropdown-content" id="dropdownContent">
-          <div class="dropdown-item" onclick="toggleCheckbox('pop')">
-            <span class="checkbox-icon" id="popCheckbox">&#9733;</span>
-            Поп
-          </div>
-          <div class="dropdown-item" onclick="toggleCheckbox('rap')">
-            <span class="checkbox-icon" id="rapCheckbox">&#9733;</span>
-            Рэп
-          </div>
-          <div class="dropdown-item" onclick="toggleCheckbox('retro')">
-            <span class="checkbox-icon" id="retroCheckbox">&#9733;</span>
-            Рэтро
-          </div>
-          <div class="dropdown-item" onclick="toggleCheckbox('rock')">
-            <span class="checkbox-icon" id="rockCheckbox">&#9733;</span>
-            Рок
+      <div class="d-flex col-lg-3 justify-content-around">
+        <div class="d-flex col-md-6 col-sm-6 me-5">
+          <select id="sorting" class="custom-select">
+            <option value="popularity" selected><span class="selecthov">По популярности</span></option>
+            <option value="date"><span class="selecthov">По дате</span></option>
+          </select>
+        </div>
+    
+        <div class="dropdown-list d-flex justify-content-center col-md-6 col-sm-6">
+          <button class="dropdown-btn" onclick="toggleDropdown()">
+            Выберите жанры
+            <span class="counter-badge" id="counterBadge">0</span>
+          </button>
+          <div class="dropdown-content" id="dropdownContent">
+            <div class="dropdown-item" onclick="toggleCheckbox('pop')">
+              <span class="checkbox-icon" id="popCheckbox">&#9733;</span>
+              Поп
+            </div>
+            <div class="dropdown-item" onclick="toggleCheckbox('rap')">
+              <span class="checkbox-icon" id="rapCheckbox">&#9733;</span>
+              Рэп
+            </div>
+            <div class="dropdown-item" onclick="toggleCheckbox('retro')">
+              <span class="checkbox-icon" id="retroCheckbox">&#9733;</span>
+              Рэтро
+            </div>
+            <div class="dropdown-item" onclick="toggleCheckbox('rock')">
+              <span class="checkbox-icon" id="rockCheckbox">&#9733;</span>
+              Рок
+            </div>
           </div>
         </div>
       </div>
@@ -231,8 +233,8 @@
   </section>
 
   <section>
-    <div class="container d-flex flex-row justify-content-between align-items-start">
-        <div class="d-flex cardavatar flex-column col-lg-3 align-items-center position-relative">
+    <div class="container d-flex justify-content-between align-items-start">
+        <div class="d-flex cardavatar flex-column col-lg-3 col-md-12 col-sm-12 align-items-center justify-content-center">
 
             <div class="round-photo-container my-3">
                 <img class="round-photo" src="public/img/avatarBody.svg" alt="Your Photo">
@@ -240,7 +242,7 @@
             <b class="text-white fs-5">Александра Карымовна</b>
             <b class="text-white">Участник</b>
             <span class="textbody">Омская область</span>
-            <span class="textbody">Весна <img src="public/img/star.svg" alt="star"> 2,5М • Год <img src="public/img/star.svg" alt="star"> 2,5М • 750</span>
+            <span class="textbody">Весна <img src="public/img/star.svg" alt="star">2,5М • Год <img src="public/img/star.svg" alt="star">2,5М • 750</span>
             <div class="d-flex flex-column my-2 justify-content-between align-items-between">
                 <div class="d-flex  text-white  justify-content-between align-items-between medali">
                     <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
@@ -254,8 +256,8 @@
             <span class="gray">Регистрация: 12.05.22</span>
             <button type="submit" value="Input" class="btn btn-danger my-3 py-3 w-75">Подписаться</button>
         </div>
-        <div class="d-flex flex-wrap justify-content-between">
-          <div class="card col-lg-3 m-3">
+        <div class="d-flex flex-wrap justify-content-around">
+          <div class="card col-lg-3 ">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-between">
@@ -264,7 +266,7 @@
                   <span class="textbody">15.10.22</span>
                 </div>
                 <div class="d-flex">
-                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
@@ -276,7 +278,7 @@
                 </div>
             </div>
           </div>
-          <div class="card col-lg-3 m-3">
+          <div class="card col-lg-3">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-between">
@@ -285,7 +287,7 @@
                   <span class="textbody">15.10.22</span>
                 </div>
                 <div class="d-flex">
-                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
@@ -297,7 +299,7 @@
                 </div>
             </div>
           </div>
-          <div class="card col-lg-3 m-3">
+          <div class="card col-lg-3">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-between">
@@ -306,7 +308,7 @@
                   <span class="textbody">15.10.22</span>
                 </div>
                 <div class="d-flex">
-                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
@@ -318,7 +320,7 @@
                 </div>
             </div>
           </div>
-          <div class="card col-lg-3 m-3">
+          <div class="card col-lg-3 ">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-between">
@@ -327,7 +329,7 @@
                   <span class="textbody">15.10.22</span>
                 </div>
                 <div class="d-flex">
-                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
@@ -339,8 +341,6 @@
                 </div>
             </div>
           </div>
-
-          
         </div>
         
     </div>

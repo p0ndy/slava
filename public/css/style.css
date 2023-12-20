@@ -1,3 +1,16 @@
+@media (max-width: 767px) {
+  .container {
+      flex-direction: column; /* Изменяем направление флекс-контейнера на колонку */
+      align-items: center; /* Выравниваем по центру */
+  }
+
+  .cardavatar,
+  .card {
+      width: 100%; /* Занимает 100% ширины на мобильных устройствах */
+      margin-bottom: 10px; /* Добавьте отступ между элементами */
+  }
+}
+
 header{
     background-color: #111216;
 }
@@ -221,7 +234,7 @@ body{
   color: #C3C3C3;
   background-color: #111216;
   border: none;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   outline: none;
 }
