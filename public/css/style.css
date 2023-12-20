@@ -136,10 +136,178 @@ a{
   background-image: url(images/eye-slash.svg);
 }
 
+.textbody{
+  color: #C3C3C3;
+}
+
+.gray{
+  color: #646869;
+}
+
+.green{
+  background-color: #54A93F;
+}
+
+.cardavatar{
+overflow: hidden;
+display: inline-block;
+}
+
+.shest{
+  cursor: pointer;
+}
+
+.card{
+  background-color: #111216;
+  overflow: hidden;
+  width: 24rem;
+}
+
+.round-photo-container {
+  width: 143.72px; /* Установите размер контейнера (фотографии + отступы) по вашему усмотрению */
+  height: 143.72px; /* Установите размер контейнера (фотографии + отступы) по вашему усмотрению */
+  border-radius: 50%; /* Делает контейнер круглым */
+  border: 2px solid #FE2C55; /* Бордюр цвета #FE2C55 */
+  overflow: hidden; /* Обрезает контент, чтобы сохранить форму круга */
+  padding: 21.86px; /* Отступ от края контейнера до бордюра */
+}
+
+.round-photo {
+  width: 100%; /* Фотография занимает всю ширину контейнера */
+  height: 100%; /* Фотография занимает всю высоту контейнера */
+  object-fit: cover; /* Сохраняет пропорции фотографии и обрезает ее, чтобы она влезла в контейнер */
+}
+
+body{
+  background-color: #1F1F27;
+}
+
+.cardavatar{
+  background-color: #111216;
+}
+
 .main{
   background-color: #1F1F27;
 }
 
+/* Стилизация общего контейнера */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #111216;
+  padding: 4px;
+  border-radius: 5px;
+  margin: 4px;
+}
 
+/* Стилизация иконки поиска */
+.search-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Стилизация текстового поля */
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.custom-select {
+  color: #C3C3C3;
+  background-color: #111216;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+/* Стили для опций в выпадающем списке */
+.custom-select option {
+  background-color: #111216;
+  color: #C3C3C3;
+}
+
+/* Изменения при наведении на опции в выпадающем списке */
+.custom-select option:hover {
+  background-color: #FE2C55;
+  color: #111216;
+}
+option.selecthov:hover{
+  color: #FE2C55;
+}
+
+.dropdown-list {
+  position: relative;
+  display: inline-block;
+  color: #C3C3C3;
+}
+
+.dropdown-btn {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #111216;
+  border: none;
+  color: #C3C3C3;
+}
+
+.counter-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FE2C55;
+  color: #fafafa;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111216;
+  border: 1px solid #FE2C55;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #FE2C55;
+  color: #111216;
+}
+
+.checkbox-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #FE2C55;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FE2C55;
+}
+
+.checkbox-icon.checked {
+  background-color: #FE2C55;
+  color: #111216;
+}
 
 

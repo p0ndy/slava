@@ -185,17 +185,167 @@
    </nav>
 
    <section class="main">
-    <div class="container ">
-      <div class="search d-flex">
-        <div class="form  d-flex flex-row">
+    <div class="container d-flex flex-row justify-content-end align-items-center py-2">
+  
+      <div class="search-bar col-lg-8 d-flex py-1">
+        <div class="search-icon">
           <img src="public/img/search.svg" alt="search">
-          <input type="text" class="form-control form-input" placeholder="Поиск">
+        </div>
+        <input type="text" placeholder="Поиск">
+      </div>
+  
+      <div class="d-flex col-lg-2 justify-content-end">
+        <select id="sorting" class="custom-select">
+          <option value="popularity" selected><span class="selecthov">По популярности</span></option>
+          <option value="date"><span class="selecthov">По дате</span></option>
+        </select>
+      </div>
+  
+      <div class="dropdown-list d-flex col-lg-2 justify-content-center">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          Выберите жанры
+          <span class="counter-badge" id="counterBadge">0</span>
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+          <div class="dropdown-item" onclick="toggleCheckbox('pop')">
+            <span class="checkbox-icon" id="popCheckbox">&#9733;</span>
+            Поп
+          </div>
+          <div class="dropdown-item" onclick="toggleCheckbox('rap')">
+            <span class="checkbox-icon" id="rapCheckbox">&#9733;</span>
+            Рэп
+          </div>
+          <div class="dropdown-item" onclick="toggleCheckbox('retro')">
+            <span class="checkbox-icon" id="retroCheckbox">&#9733;</span>
+            Рэтро
+          </div>
+          <div class="dropdown-item" onclick="toggleCheckbox('rock')">
+            <span class="checkbox-icon" id="rockCheckbox">&#9733;</span>
+            Рок
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <section>
+    <div class="container d-flex flex-row justify-content-between align-items-start">
+        <div class="d-flex cardavatar flex-column col-lg-3 align-items-center position-relative">
+
+            <div class="round-photo-container my-3">
+                <img class="round-photo" src="public/img/avatarBody.svg" alt="Your Photo">
+            </div>
+            <b class="text-white fs-5">Александра Карымовна</b>
+            <b class="text-white">Участник</b>
+            <span class="textbody">Омская область</span>
+            <span class="textbody">Весна <img src="public/img/star.svg" alt="star"> 2,5М • Год <img src="public/img/star.svg" alt="star"> 2,5М • 750</span>
+            <div class="d-flex flex-column my-2 justify-content-between align-items-between">
+                <div class="d-flex  text-white  justify-content-between align-items-between medali">
+                    <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
+                    <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
+                </div>
+                <div class="d-flex  text-white  justify-content-between align-items-between">
+                    <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
+                    <span class=""><img src="public/img/silver.svg" alt="silver">Весна 2023</span>
+                </div>
+            </div>
+            <span class="gray">Регистрация: 12.05.22</span>
+            <button type="submit" value="Input" class="btn btn-danger my-3 py-3 w-75">Подписаться</button>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between">
+          <div class="card col-lg-3 m-3">
+            <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-between">
+                <div class="d-flex">
+                  <span class="text-white green">РОК</span>
+                  <span class="textbody">15.10.22</span>
+                </div>
+                <div class="d-flex">
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                </div>
+              </div>
+                <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                <div class="d-flex text-white my-2 justify-content-between align-items-between">
+                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
+                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
+                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
+                  <img src="public/img/shest.svg" alt="" class="shest">
+                </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 m-3">
+            <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-between">
+                <div class="d-flex">
+                  <span class="text-white green">РОК</span>
+                  <span class="textbody">15.10.22</span>
+                </div>
+                <div class="d-flex">
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                </div>
+              </div>
+                <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                <div class="d-flex text-white my-2 justify-content-between align-items-between">
+                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
+                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
+                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
+                  <img src="public/img/shest.svg" alt=""class="shest"> 
+                </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 m-3">
+            <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-between">
+                <div class="d-flex">
+                  <span class="text-white green">РОК</span>
+                  <span class="textbody">15.10.22</span>
+                </div>
+                <div class="d-flex">
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                </div>
+              </div>
+                <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                <div class="d-flex text-white my-2 justify-content-between align-items-between">
+                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
+                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
+                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
+                  <img src="public/img/shest.svg" alt="" class="shest">
+                </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 m-3">
+            <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-between">
+                <div class="d-flex">
+                  <span class="text-white green">РОК</span>
+                  <span class="textbody">15.10.22</span>
+                </div>
+                <div class="d-flex">
+                  <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt=""> 123М</span>
+                </div>
+              </div>
+                <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                <div class="d-flex text-white my-2 justify-content-between align-items-between">
+                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
+                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
+                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
+                  <img src="public/img/shest.svg" alt="" class="shest">
+                </div>
+            </div>
+          </div>
+
           
         </div>
         
-      </div>
     </div>
-   </section>
+</section>
+
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
  
 <script>
@@ -272,7 +422,36 @@
   });
 
 </script>
+<script>
+  // Счетчик выбранных жанров
+  let selectedCount = 0;
 
+  // Скрипт для управления выпадающим списком
+  function toggleDropdown() {
+    const dropdownContent = document.getElementById('dropdownContent');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Скрипт для управления чекбоксами и счетчиком
+  function toggleCheckbox(checkboxId) {
+    const checkbox = document.getElementById(checkboxId + 'Checkbox');
+    checkbox.classList.toggle('checked');
+
+    // Обновляем счетчик
+    selectedCount = document.querySelectorAll('.checked').length;
+    const counterBadge = document.getElementById('counterBadge');
+    counterBadge.textContent = selectedCount;
+  }
+
+  // Закрыть выпадающий список при клике вне его области
+  document.addEventListener('click', function(event) {
+    const dropdownList = document.querySelector('.dropdown-list');
+    if (!dropdownList.contains(event.target)) {
+      const dropdownContent = document.getElementById('dropdownContent');
+      dropdownContent.style.display = 'none';
+    }
+  });
+</script>
     
 </body>
 </html>
