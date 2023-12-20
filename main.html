@@ -12,7 +12,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <header>
     <div class="container">
-      <div class="d-flex d-row justify-content-end align-items-end py-3 flex-wrap">
+      <div class="d-flex d-row justify-content-end align-items-center py-3 flex-wrap">
         <a href="main.html" class="d-flex  col-lg-6">
           <img src="public/img/logo.svg" alt="logo">
         </a>
@@ -41,9 +41,10 @@
                 </div>
             </div>
           </div>
-          <button class="btn avatar-button" type="button" data-bs-toggle="modal" data-bs-target="#auth">
-            <img src="public/img/avatarHeader.png" alt="ava">
-          </button>
+         <div class="d-flex justify-content-between align-items-center">
+            <a href=""type="button" class="buttonmain mx-1 my-3 py-1 px-4 text-white" data-bs-toggle="modal" data-bs-target="#auth">Вход</a>
+            <a href=""type="button" class="text-white mx-1 btn btn-danger my-3" data-bs-toggle="modal" data-bs-target="#register">Регистрация</a>
+         </div>
         </div>
       </div>
     </div>
@@ -70,8 +71,7 @@
                 <span></span>
             </div>
             <a href="#" class="textred"><u>Забыли пароль?</u></a>
-
-              <button type="submit" value="Input" class="btn btn-danger my-3 py-3" >Войти</button>
+              <a href="index.html" class="btn btn-danger my-3 py-3" >Войти</a>
           </div>
           <div class="modal-footer clearfix">
             <div class="container">
@@ -163,7 +163,7 @@
                     <div class="row mt-3">
                       <!-- 3я часть: текст "Нет аккаунта? Зарегистрируйтесь" -->
                       <div class=" d-flex justify-content-center align-items-center">
-                         <span class="textgray mx-1">Уже есть аккаунт? </span> <a href="" class="textred mx-1" data-bs-toggle="modal" data-bs-target="#registerModal">Авторизуйтесь</a>
+                         <span class="textgray mx-1">Уже есть аккаунт? </span> <a href="index.html" class="textred mx-1" >Авторизуйтесь</a>
                       </div>
                     </div>
                   </div>
@@ -176,13 +176,18 @@
     </div>
     
    <nav class="navred">
-    <div class="container py-2">
-      <a href="main.html">
-        <div class="d-flex justify-content-end align-items-center">
-            <img src="public/img/arrowLeft.svg" alt="arrow" class="me-1">
-            <span class="text-white ms-1">Назад</span>
-          </div>
-      </a>
+    <div class="container py-2 text-white flex-row">
+      <div class="d-flex justify-content-center">
+        <span class="navhover">
+            <a href="main.html" class="d-flex navtext fs-5 p-2">Лента</a>
+        </span>
+        <span class="navhover">
+            <a href="main.html" class="d-flex navtext  fs-5 p-2">Зал славы</a>
+        </span>
+        <span class="navhover">
+            <a href="main.html" class="d-flex navtext fs-5 p-2">О проекте</a>
+        </span>
+      </div>
     </div>
    </nav>
 
@@ -195,16 +200,21 @@
         </div>
         <input type="text" placeholder="Поиск">
       </div>
+
+      
   
       <div class="d-flex col-lg-3 justify-content-around">
-        <div class="d-flex col-md-6 col-sm-6 me-5">
+        <div class="d-flex follow me-2">
+            <button class="custom-button" onclick="toggleColor()">Подписки</button>
+          </div>
+        <div class="d-flex col-md-6 col-sm-6  me-1">
           <select id="sorting" class="custom-select">
             <option value="popularity" selected><span class="selecthov">По популярности</span></option>
             <option value="date"><span class="selecthov">По дате</span></option>
           </select>
         </div>
-    
-        <div class="dropdown-list d-flex justify-content-center col-md-6 col-sm-6">
+       
+        <div class="dropdown-list d-flex justify-content-center col-md-6 col-sm-6 me-1">
           <button class="dropdown-btn" onclick="toggleDropdown()">
             Выберите жанры
             <span class="counter-badge" id="counterBadge">0</span>
@@ -236,29 +246,7 @@
 
   <section>
     <div class="container d-flex justify-content-between align-items-start">
-        <div class="d-flex cardavatar flex-column col-lg-3 col-md-12 col-sm-12 align-items-center justify-content-center">
-
-            <div class="round-photo-container my-3">
-                <img class="round-photo" src="public/img/avatarBody.svg" alt="Your Photo">
-            </div>
-            <b class="text-white fs-5">Александра Карымовна</b>
-            <b class="text-white">Участник</b>
-            <span class="textbody">Омская область</span>
-            <span class="textbody">Весна <img src="public/img/star.svg" alt="star">2,5М • Год <img src="public/img/star.svg" alt="star">2,5М • 750</span>
-            <div class="d-flex flex-column my-2 justify-content-between align-items-between">
-                <div class="d-flex  text-white  justify-content-between align-items-between medali">
-                    <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
-                    <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
-                </div>
-                <div class="d-flex  text-white  justify-content-between align-items-between">
-                    <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
-                    <span class=""><img src="public/img/silver.svg" alt="silver">Весна 2023</span>
-                </div>
-            </div>
-            <span class="gray">Регистрация: 12.05.22</span>
-            <button type="submit" value="Input" class="btn btn-danger my-3 py-3 w-75">Подписаться</button>
-        </div>
-        <div class="d-flex flex-wrap justify-content-around">
+        <div class="d-flex flex-wrap justify-content-between">
           <div class="card col-lg-3 mb-3">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
@@ -272,11 +260,12 @@
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
-                <div class="d-flex text-white my-2 justify-content-between align-items-between">
-                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
-                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
-                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
-                  <img src="public/img/shest.svg" alt="" class="shest">
+                <div class="d-flex">
+                    <img src="public/img/avaMain.svg" alt="ava">
+                    <div class="d-flex flex-column ms-1">
+                        <b class="text-white">Александра Карымова</b>
+                        <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                    </div>
                 </div>
             </div>
           </div>
@@ -293,11 +282,12 @@
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
-                <div class="d-flex text-white my-2 justify-content-between align-items-between">
-                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
-                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
-                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
-                  <img src="public/img/shest.svg" alt=""class="shest"> 
+                <div class="d-flex">
+                    <img src="public/img/avaMain.svg" alt="ava">
+                    <div class="d-flex flex-column ms-1">
+                        <b class="text-white">Александра Карымова</b>
+                        <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                    </div>
                 </div>
             </div>
           </div>
@@ -314,15 +304,16 @@
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
-                <div class="d-flex text-white my-2 justify-content-between align-items-between">
-                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
-                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
-                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
-                  <img src="public/img/shest.svg" alt="" class="shest">
+                <div class="d-flex">
+                    <img src="public/img/avaMain.svg" alt="ava">
+                    <div class="d-flex flex-column ms-1">
+                        <b class="text-white">Александра Карымова</b>
+                        <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                    </div>
                 </div>
             </div>
           </div>
-          <div class="card col-lg-3  mb-3">
+          <div class="card col-lg-3 mb-3">
             <img src="public/img/video.svg" class="card-img-top" alt="Image description">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-between">
@@ -335,14 +326,59 @@
                 </div>
               </div>
                 <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
-                <div class="d-flex text-white my-2 justify-content-between align-items-between">
-                  <span class=""><img src="public/img/gold.svg" alt="gold">Год 2023</span>
-                  <span class=""><img src="public/img/silver.svg" alt="silver">Лето 2023</span>
-                  <span class=""><img src="public/img/bronze.svg" alt="bronze">Осень 2023</span>
-                  <img src="public/img/shest.svg" alt="" class="shest">
+                <div class="d-flex">
+                    <img src="public/img/avaMain.svg" alt="ava">
+                    <div class="d-flex flex-column ms-1">
+                        <b class="text-white">Александра Карымова</b>
+                        <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                    </div>
                 </div>
+             </div>
             </div>
-          </div>
+            <div class="card col-lg-3 mb-3">
+                <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-between">
+                    <div class="d-flex">
+                      <span class="text-white green">РОК</span>
+                      <span class="textbody">15.10.22</span>
+                    </div>
+                    <div class="d-flex">
+                      <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
+                    </div>
+                  </div>
+                    <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                    <div class="d-flex">
+                        <img src="public/img/avaMain.svg" alt="ava">
+                        <div class="d-flex flex-column ms-1">
+                            <b class="text-white">Александра Карымова</b>
+                            <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card col-lg-3 mb-3">
+                <img src="public/img/video.svg" class="card-img-top" alt="Image description">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-between">
+                    <div class="d-flex">
+                      <span class="text-white green">РОК</span>
+                      <span class="textbody">15.10.22</span>
+                    </div>
+                    <div class="d-flex">
+                      <span class="textbody">Весна <img src="public/img/heart.svg" alt="">15 • Год <img src="public/img/heart.svg" alt="">48М • <img src="public/img/heart.svg" alt="">123М</span>
+                    </div>
+                  </div>
+                    <h5 class="card-title text-white my-2">Музыкальная вариация песни «All you need is love»</h5>
+                    <div class="d-flex">
+                        <img src="public/img/avaMain.svg" alt="ava">
+                        <div class="d-flex flex-column ms-1">
+                            <b class="text-white">Александра Карымова</b>
+                            <span class="textgray">Весна <img src="public/img/star.svg" alt="star"> 2,5М Год <img src="public/img/star.svg" alt="star">  2,5М</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
         </div>
         
     </div>
@@ -404,6 +440,14 @@
 });
     </script>
     
+    <script>
+        function toggleColor() {
+  var button = document.querySelector('.custom-button');
+  button.classList.toggle('clicked');
+}
+
+    </script>
+
     <script>
   document.addEventListener('DOMContentLoaded', function () {
     // Получаем ссылку на элемент "Зарегистрируйтесь"

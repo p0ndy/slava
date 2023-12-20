@@ -15,6 +15,10 @@ header{
     background-color: #111216;
 }
 
+.buttonmain{
+  border: 2px solid #FE2C55;
+}
+
 .avatar-button {
   display: inline-block;
   border: 2px solid #FE2C55;
@@ -199,9 +203,7 @@ body{
   background-color: #111216;
 }
 
-.main{
-  background-color: #1F1F27;
-}
+
 
 /* Стилизация общего контейнера */
 .search-bar {
@@ -237,6 +239,44 @@ body{
   padding: 10px;
   cursor: pointer;
   outline: none;
+}
+
+.follow{
+  background-color: #111216
+}
+
+.custom-button {
+  background-color: #111216;
+  color: #CCCDCD;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-dropdown {
+  background-color: #111216;
+  color: #CCCDCD;
+  border: none;
+  border-radius: 4px;
+}
+
+.custom-dropdown option {
+  background-color: #111216;
+  color: #CCCDCD;
+}
+
+
+.custom-button.clicked {
+  background-color: #FE2C55;
+  color: #FFFFFF;
+}
+
+a.navtext{
+  text-decoration: none;
+  color: white;
+}
+
+.navhover:hover{
+  background-color: #FE5677;
 }
 
 
@@ -300,6 +340,9 @@ option.selecthov:hover{
   padding: 5px;
   cursor: pointer;
 }
+
+
+
 
 .dropdown-item:hover {
   background-color: #FE2C55;
